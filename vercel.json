@@ -1,8 +1,5 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/app" }
-  ],
-  "redirects": [
-    {"source": "/", "destination": "https://novateam.xyz/"}
   ]
 }
