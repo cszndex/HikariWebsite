@@ -3,15 +3,6 @@
     { "source": "/(.*)", "destination": "/api/app" }
   ],
   "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "hikari-eosin.vercel.app/"
-        }
-      ],
-      "destination": "https://novateam.xyz/"
-    }
+    {"source": "/", "destination": "https://novateam.xyz/"}
   ]
 }
