@@ -15,16 +15,16 @@ app.config['SECRET_KEY'] = "Hikari"
 
 @app.route('/', methods=["GET"])
 def home():
-  file = "Hikari.lua"
+  filePath = "api/hikari"
+  file = open(filePath, 'r')
+  response = Response(file.read(), content_type='text/plain')
   
-  return send_file(file, mimetype="text/plain")
-  
+  return response
+
 @app.route('/components/library', methods=["GET"])
 def library():
-  filePath = "api/component/library"
-  
+  filePath = "api/hikari-component/library"
   file = open(filePath, 'r')
-  
   response = Response(file.read(), content_type='text/plain')
   
   return response
