@@ -18,3 +18,9 @@ def home():
   file = "Hikari.lua"
   
   return send_file(file, mimetype="text/plain")
+  
+@app.route('components/library')
+def library():
+  file = "Hikari[Components]/Library.lua"
+  
+  return send_file(file, mimetype="text/plain")
