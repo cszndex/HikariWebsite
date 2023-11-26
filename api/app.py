@@ -15,6 +15,6 @@ app.config['SECRET_KEY'] = "Hikari"
 
 @app.route('/')
 def home():
-  file = "/api/BSS[GUI].lua"
+  file = "api/bss.lua"
   
   return send_file(file, mimetype="text/plain")
