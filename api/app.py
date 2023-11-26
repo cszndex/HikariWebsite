@@ -21,7 +21,7 @@ def home():
   
 @app.route('/components/library', methods=["GET"])
 def library():
-  filePath = "/api/Components/Library.lua"
+  filePath = "api/component/library"
   
   file = open(filePath, 'r')
   
