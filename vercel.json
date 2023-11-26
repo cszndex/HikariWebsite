@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/app" }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "hikari.xyz"
+        }
+      ],
+      "destination": "https://novateam.xyz/"
+    }
+  ]
+}
