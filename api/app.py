@@ -21,8 +21,10 @@ def home():
   
 @app.route('/components/library', methods=["GET"])
 def library():
-  file = "Hikari[Components]/Library.lua"
+  filePath = "Hikari[Components]/Library.lua"
   
-  response = Response(file, content_type='text/plain')
+  file = open(filePath, 'r')
+  
+  response = Response(file.read(), content_type='text/plain')
   
   return response
