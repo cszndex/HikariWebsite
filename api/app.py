@@ -23,4 +23,6 @@ def home():
 def library():
   file = "Hikari[Components]/Library.lua"
   
-  return send_file(file, mimetype="text/plain")
+  response = Response(file, content_type='text/plain')
+  
+  return response
