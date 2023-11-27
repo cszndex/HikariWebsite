@@ -23,7 +23,7 @@ def home():
 
 @app.route('/components/library', methods=["GET"])
 def library():
-  filePath = "api/hikari-component/library"
+  filePath = "api/hikari-components/library"
   fileOpen = open(filePath, 'r')
   fileRead = file.read()
   return render_template("library.html", fileRead=fileRead)
