@@ -26,3 +26,10 @@ def library():
   fileOpen = open(filePath, 'r')
   fileRead = fileOpen.read()
   return Response(fileRead, content_type='text/plain')
+  
+@app.route("/games/bss", methods=["GET"])
+def bss():
+  filePath = "api/hikari-games/hikari[BSS]"
+  fileOpen = open(filePath, 'r')
+  fileRead = fileOpen.read()
+  return Response(fileRead, content_type='text/plain')
