@@ -1,9 +1,5 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/app" }
-  ],
-  "redirects": [
-    {"source": "/", "destination": "https://discord.com/invite/Jb4DP46PF8"},
-    {"source": "/components/library", "destination": "https://discord.com/invite/Jb4DP46PF8"}
   ]
 }
