@@ -17,13 +17,12 @@ app.config['SECRET_KEY'] = "Hikari"
 def home():
   filePath = "api/hikari"
   file = open(filePath, 'r')
-  response = Response(file.read(), content_type='text/plain')
-  
-  return response
+  fileRead = file.read()
+  return render_template("library.html", fileRead=fileRead)
 
 @app.route('/components/library', methods=["GET"])
 def library():
   filePath = "api/hikari-components/library"
   fileOpen = open(filePath, 'r')
   fileRead = fileOpen.read()
-  return render_template("library.html", fileRead=fileRead)
+  return Response(fileRead, content_type='text/plain')
