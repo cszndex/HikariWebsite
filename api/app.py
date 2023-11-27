@@ -25,5 +25,5 @@ def home():
 def library():
   filePath = "api/hikari-components/library"
   fileOpen = open(filePath, 'r')
-  fileRead = file.read()
+  fileRead = fileOpen.read()
   return render_template("library.html", fileRead=fileRead)
