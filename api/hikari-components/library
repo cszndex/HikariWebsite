@@ -59,14 +59,12 @@ local Orion = Instance.new("ScreenGui")
 local VisionFrame = Instance.new("Frame")
 Orion.Name = "Orion"
 VisionFrame.Name = "Vision[Frame]"
+VisionFrame.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
 if syn then
 	syn.protect_gui(Orion)
-	syn.protect_gui(VisionFrame)
 	Orion.Parent = game.CoreGui
-	VisionFrame.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
 else
 	Orion.Parent = gethui() or game.CoreGui
-	VisionFrame.Parent = gethui() or game.CoreGui.TopBarApp.TopBarFrame.RightFrame
 end
 if gethui then
 	for _, Interface in ipairs(gethui():GetChildren()) do
@@ -74,22 +72,12 @@ if gethui then
 			Interface:Destroy()
 		end
 	end
- for _, Interface2 in ipairs(gethui():GetChildren()) do
-    if Interface2.Name == VisionFrame.Name and Interface2 ~= VisionFrame then
-  		Interface2:Destroy()
-  	end
-  end
 else
 	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
 		if Interface.Name == Orion.Name and Interface ~= Orion then
 			Interface:Destroy()
 		end
 	end
-  for _, Interface2 in ipairs(game.CoreGui.TopBarApp.TopBarFrame.RightFrame:GetChildren()) do
-  	if Interface2.Name == VisionFrame.Name and Interface2 ~= VisionFrame then
-  		Interface2:Destroy()
-  	end
-  end
 end
 
 VisionFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -132,6 +120,17 @@ end)
 VisionButton.MouseButton1Down:Connect(function()
   TweenService:Create(VisionButton, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(25 + 6, 25 + 6, 25 + 6)}):Play()
 end)
+
+function __checkHikari()
+  do
+    local xChika = game.CoreGui.TopBarApp.TopBarFrame.RightFrame:FindFirstChild("Vision[Frame]")
+    if xChika then
+      xChika:Destroy()
+    end
+  end
+end
+
+__checkHikari()
 
 function OrionLib:IsRunning()
 	if gethui then
