@@ -20,6 +20,10 @@ def home():
   fileRead = file.read()
   return render_template("library.html", fileRead=fileRead)
 
+@app.route('/hikari', methods=["GET"])
+def hikari():
+  return render_template("loader.html")
+
 @app.route('/components/library', methods=["GET"])
 def library():
   filePath = "api/hikari-components/library"
