@@ -1,1 +1,1 @@
-print("Hello")
+if identifyexecutor() == "Delta" or identifyexecutor() == "Codex" then game.Players.LocalPlayer:Kick("Executor not supported!") end pcall(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/cszndex/HikariHUB/master/HikariHUB"))()end)
