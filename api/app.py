@@ -37,7 +37,6 @@ def library2():
   fileOpen = open(filePath, 'r')
   fileRead = fileOpen.read()
   return Response(fileRead, content_type='text/plain')
-  
 
 @app.route("/games/bss", methods=["GET"])
 def bss():
@@ -51,4 +50,4 @@ def bss():
   filePath = "api/hikari-games/Makori"
   fileOpen = open(filePath, 'r')
   fileRead = fileOpen.read()
-  return Response(fileRead, content_type='text/plain')
+  return render_template("makori.html", fileRead=fileRead)
