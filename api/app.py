@@ -46,7 +46,7 @@ def bss():
   return Response(fileRead, content_type='text/plain')
   
 @app.route("/games/makori", methods=["GET"])
-def bss():
+def makori():
   filePath = "api/hikari-games/Makori"
   fileOpen = open(filePath, 'r')
   fileRead = fileOpen.read()
